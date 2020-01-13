@@ -1,0 +1,34 @@
+﻿<Window x:Class="TimesheetApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TimesheetApp"
+        mc:Ignorable="d"
+        Title="TimeSheeter" Height="450" Width="800">
+    <Grid>
+        <TextBox Name="UserToken" IsEnabled="True" HorizontalAlignment="Left" Height="23" Margin="87,52,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="197" RenderTransformOrigin="1.716,0.25"/>
+        <Label Content="Authenticate" HorizontalAlignment="Left" Margin="22,10,0,0" VerticalAlignment="Top" Width="91" RenderTransformOrigin="0.52,2.168"/>
+        <Label Content="Token" HorizontalAlignment="Left" Margin="30,49,0,0" VerticalAlignment="Top" Width="52"/>
+        <Button Name="Auth" IsEnabled="True"  Content="Authenticate" HorizontalAlignment="Left" Margin="306,55,0,0" VerticalAlignment="Top" Width="92" Click="Auth_Click"/>
+        <Button Name="File" IsEnabled="False" Content="Upload" HorizontalAlignment="Left" Margin="30,325,0,0" VerticalAlignment="Top" Width="111" Click="File_Click"/>
+        <Label Content="Update the Day and hours columns if they are not as follows: " HorizontalAlignment="Left" Margin="23,284,0,0" VerticalAlignment="Top" Width="337"/>
+        <Label Content="Day:" HorizontalAlignment="Left" Margin="365,284,0,0" VerticalAlignment="Top"/>
+        <Label Content="hours:" HorizontalAlignment="Left" Margin="476,284,0,0" VerticalAlignment="Top" RenderTransformOrigin="3.598,-1.488"/>
+        <TextBox Name="Day" HorizontalAlignment="Left" Height="23" Margin="403,287,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="46"/>
+        <TextBox Name="Hours" HorizontalAlignment="Left" Height="23" Margin="524,287,0,0" TextWrapping="Wrap" Text="5" VerticalAlignment="Top" Width="46" RenderTransformOrigin="3.357,-1.203"/>
+        <Button Name="Submit" Content="Submit" IsEnabled="False" HorizontalAlignment="Left" Margin="30,373,0,0" VerticalAlignment="Top" Width="111" Click="Submit_Click"/>
+        <ComboBox Name="Projects" IsEnabled="False" HorizontalAlignment="Left" Margin="110,91,0,0" VerticalAlignment="Top" Width="215" SelectionChanged="Projects_SelectionChanged"/>
+        <Label Content="Project" HorizontalAlignment="Left" Margin="30,87,0,0" VerticalAlignment="Top"/>
+        <Label Content="Client" HorizontalAlignment="Left" Margin="437,49,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="Client" HorizontalAlignment="Left" Height="23" Margin="494,52,0,0" TextWrapping="Wrap" Text="" IsEnabled="False" VerticalAlignment="Top" Width="208"/>
+        <Label Content="Module" HorizontalAlignment="Left" Margin="30,118,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.169,-0.015"/>
+        <ComboBox Name="Modules" IsEnabled="False" HorizontalAlignment="Left" Margin="110,122,0,0" VerticalAlignment="Top" Width="215"/>
+        <Label Content="WorkType" HorizontalAlignment="Left" Margin="30,149,0,0" VerticalAlignment="Top"/>
+        <ComboBox Name="WorkTypes" IsEnabled="False" HorizontalAlignment="Left" Margin="110,153,0,0" VerticalAlignment="Top" Width="215"/>
+        <Button Name="Save" Content="Save" HorizontalAlignment="Left" Margin="30,208,0,0" VerticalAlignment="Top" Width="111" Click="Save_Click"/>
+        <Button Name="ReAuth" IsEnabled="False" Content="Re-Authenticate" HorizontalAlignment="Left" Margin="173,208,0,0" VerticalAlignment="Top" Width="133" Click="ReAuth_Click"/>
+        <Label Content="Upload times" HorizontalAlignment="Left" Margin="22,253,0,0" VerticalAlignment="Top" Width="119"/>
+
+    </Grid>
+</Window>
