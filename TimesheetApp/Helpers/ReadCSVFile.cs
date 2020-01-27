@@ -25,7 +25,7 @@ namespace TimesheetApp.Helpers
                         var list = row.Split(',');
                         if (times.ContainsKey(list[day].ToLower()))
                         {
-                            times[list[day]] += ConvertToDecimalTime(list[hours]);
+                            times[list[day].ToLower()] += ConvertToDecimalTime(list[hours]);
                         }
                         else
                         {
