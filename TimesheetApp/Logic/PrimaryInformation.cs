@@ -62,7 +62,7 @@ namespace TimesheetApp.Logic
         private async Task<bool> GetProjectInformation()
         {
             //Project Information
-            var uri = _timeTaskService.BaseUri + "project/?clientid=" + Me.me.FirstOrDefault().clientid;
+            var uri = _timeTaskService.BaseUri + $"project/?clientid={Me.me.FirstOrDefault().clientid}&limit=20&active=true";
             var result = await _timeTaskService.MakeServiceCall(uri, RequestType.Get);
             if (string.IsNullOrEmpty(result))
                 return false;
